@@ -19,7 +19,7 @@
         }
 
         .text-center>h5>.top_message {
-            color: black;
+            color: black	;
             text-decoration: none;
         }
 
