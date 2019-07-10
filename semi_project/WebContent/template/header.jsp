@@ -41,10 +41,14 @@
         }
         .nav-link{
             color: black;
-            font-size: 0.8rem
+            font-size: 0.8rem;
         }
         .dropdown-menu li{
             margin-bottom: 10px;
+        }
+        
+        img{
+        	width: 200;
         }
 
     </style>
@@ -63,7 +67,7 @@
     <nav class="navbar navbar-expand-lg navbar-white bg-white static-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="http://placehold.it/150x50?text=Logo" alt="">
+                <img src="../img/logo.jpg" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
