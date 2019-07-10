@@ -24,4 +24,10 @@ public class CartDao {
 	public Connection getConnection() throws Exception{
 		return getConnection();
 	}
+
+//	public int delete(int cart_no) throws Exception{
+//		Connection con = getConnection();
+//		String sql = 
+//		con.close();
+//	}
 }
