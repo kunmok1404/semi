@@ -19,7 +19,7 @@
         }
 
         .text-center>h5>.top_message {
-            color: black;
+            color: black	;
             text-decoration: none;
         }
 
@@ -67,7 +67,7 @@
     <nav class="navbar navbar-expand-lg navbar-white bg-white static-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="../img/logo.jpg" alt="">
+                <img src="img/logo.jpg">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">

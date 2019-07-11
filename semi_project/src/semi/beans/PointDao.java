@@ -2,6 +2,9 @@ package semi.beans;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -30,7 +33,7 @@ public class PointDao {
 
 		String sql = "insert into point values(?, ?, ?, ?, sysdate, ?, ?)";
 		PreparedStatement ps = con.prepareStatement(sql);
-		ps.setInt(1, dto.getMemberId());
+		ps.setString(1, dto.getMemberId());
 		ps.setInt(2, dto.getOrdersId());
 		ps.setString(3, dto.getUseType());
 		ps.setInt(4, dto.getPoint());
@@ -40,5 +43,27 @@ public class PointDao {
 		ps.execute();
 
 		con.close();
+	}
+	
+	public List<PointDto> get(String id) throws Exception{
+		Connection con = getConnection();
+		
+		String sql = "select * from point where member_id=?";
+		
+		PreparedStatement ps = con.prepareStatement(sql);
+		
+		ps.setString(1, id);
+		
+		ResultSet rs = ps.executeQuery();
+		
+		List<PointDto> list = new ArrayList<>();
+		
+		while(rs.next()) {
+			list.add(new PointDto(rs));
+		}
+		
+		con.close();
+		
+		return list;
 	}
 }

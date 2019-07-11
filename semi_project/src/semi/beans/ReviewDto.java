@@ -2,9 +2,10 @@ package semi.beans;
 
 import java.sql.ResultSet;
 
-public class ProductReviewDto {
+public class ReviewDto {
+	private int id;
 	private int productId;
-	private int memberId;
+	private String memberId;
 	private String title;
 	private String content;
 	private int grade;
@@ -17,20 +18,27 @@ public class ProductReviewDto {
 				+ content + ", grade=" + grade + ", dateCreated=" + dateCreated + ", dateUpdate=" + dateUpdate + "]";
 	}
 
-	public ProductReviewDto() {
+	public ReviewDto() {
 		
 	}
 	
-	public ProductReviewDto(ResultSet rs) throws Exception{
+	public ReviewDto(ResultSet rs) throws Exception{
+		setId(rs.getInt("id"));
 		setProductId(rs.getInt("product_id"));
-		setMemberId(rs.getInt("member_id"));
+		setMemberId(rs.getString("member_id"));
 		setTitle(rs.getString("title"));
 		setContent(rs.getString("content"));
 		setGrade(rs.getInt("grade"));
 		setDateCreated(rs.getString("date_created"));
 		setDateUpdate(rs.getString("date_update"));
 	}
-
+	
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getId() {
+		return id;
+	}
 	public int getProductId() {
 		return productId;
 	}
@@ -39,11 +47,11 @@ public class ProductReviewDto {
 		this.productId = productId;
 	}
 
-	public int getMemberId() {
+	public String getMemberId() {
 		return memberId;
 	}
 
-	public void setMemberId(int memberId) {
+	public void setMemberId(String memberId) {
 		this.memberId = memberId;
 	}
 
