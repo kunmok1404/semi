@@ -20,12 +20,12 @@
 	crossorigin="anonymous">
 <link rel="stylesheet"
 	href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
-<link rel="stylesheet" href="../css/animate.css">
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/media-queries.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/media-queries.css">
 <!-- Javascript -->
-<script src="../js/jquery-3.2.1.min.js"></script>
-<script src="../js/jquery-migrate-3.0.0.min.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery-migrate-3.0.0.min.js"></script>
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
 	integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -34,10 +34,10 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
 	integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 	crossorigin="anonymous"></script>
-<script src="../js/jquery.backstretch.min.js"></script>
-<script src="../js/wow.min.js"></script>
-<script src="../js/retina-1.1.0.min.js"></script>
-<script src="../js/scripts.js"></script>
+<script src="js/jquery.backstretch.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/retina-1.1.0.min.js"></script>
+<script src="js/scripts.js"></script>
 <style>
 	img{
 		width: 300;
@@ -56,7 +56,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3 footer-about wow fadeInUp">
-					<img class="logo-footer" src="../img/beak.PNG">
+					<img class="logo-footer" src="img/beak.PNG">
 					<p>저희 백컬리는 항상 맛있고 안전하고 깨끗한 식재료를 제공해드리겠습니다.</p>
 				</div>
 				<div class="col-md-4 offset-md-1 footer-contact wow fadeInDown">

@@ -3,7 +3,7 @@ package semi.beans;
 import java.sql.ResultSet;
 
 public class PointDto {
-	private int memberId;
+	private String memberId;
 	private int ordersId;
 	private String useType;
 	private int point;
@@ -11,11 +11,11 @@ public class PointDto {
 	private int curretPoint;
 	private String reason;
 	
-	public int getMemberId() {
+	public String getMemberId() {
 		return memberId;
 	}
 
-	public void setMemberId(int memberId) {
+	public void setMemberId(String memberId) {
 		this.memberId = memberId;
 	}
 
@@ -77,7 +77,7 @@ public class PointDto {
 	}
 	
 	public PointDto(ResultSet rs) throws Exception{
-		setMemberId(rs.getInt("meber_id"));
+		setMemberId(rs.getString("meber_id"));
 		setOrdersId(rs.getInt("orders_id"));
 		setUseType(rs.getString("use_type"));
 		setPoint(rs.getInt("point"));
