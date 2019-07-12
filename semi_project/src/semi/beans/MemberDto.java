@@ -173,7 +173,4 @@ public class MemberDto {
 				+ ", order_date=" + order_date + ", login_date=" + login_date + ", question=" + question + ", answer="
 				+ answer + ", reason=" + reason + "]";
 	}
-	
-	
-	
 }

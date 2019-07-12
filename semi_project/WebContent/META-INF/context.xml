@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!-- maxActive: 최대, maxIdle: 여유분, maxWait: 대기시간(밀리초, 1000당 1초) -->
 <!-- 이곳에 자원등록 -->
 <Context>
@@ -14,3 +13,4 @@
 				maxIdle="10"
 				maxWait="3000"></Resource>
 </Context>
+
