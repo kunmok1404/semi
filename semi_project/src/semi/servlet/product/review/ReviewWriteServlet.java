@@ -15,6 +15,8 @@ import semi.bean.PointDao;
 import semi.bean.PointDto;
 import semi.bean.ReviewDao;
 import semi.bean.ReviewDto;
+import semi.bean.ReviewListDao;
+import semi.bean.ReviewListDto;
 
 @WebServlet(urlPatterns="/product/review/review_write.do")
 public class ReviewWriteServlet extends HttpServlet{
@@ -52,6 +54,10 @@ public class ReviewWriteServlet extends HttpServlet{
 			PointDao pdao = new PointDao();
 			PointDto pdto = pdao.get(id);
 			req.setAttribute("pdto", pdto);
+			
+			ReviewListDao rldao = new ReviewListDao();
+			ReviewListDto rldto = 
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 			resp.sendError(500);

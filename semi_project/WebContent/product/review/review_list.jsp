@@ -256,7 +256,7 @@ tbody td a {
 									</td>
 									<td width="100" nowrap="" align="center">음식</td>
 									<td width="100" nowrap="" align="center">2019-07-10</td>
-									<td width="100" nowrap="" align="center"><a href="#">작성가능</a></td>
+									<td width="100" nowrap="" align="center"><a href="review_write.do">작성가능</a></td>
 								</tr>
 							</tbody>
 						</table>
