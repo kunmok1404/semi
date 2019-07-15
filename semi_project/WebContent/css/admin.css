@@ -1,0 +1,467 @@
+@font-face {
+    font-family: Binggrae;
+    src: url("../font/Binggrae.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Binggrae;
+}
+
+.sidebar {
+    width:150px !important;
+    background-color: #212529;
+    min-height: calc(100vh - 56px);
+    position: absolute;
+}
+
+aside{
+    position: fixed;
+    width:150px;
+    min-height: calc(100vh - 56px);
+    left:0;
+    top:100px;
+    background-color: #2C3E50;
+}
+
+tr td u{
+	color:blue;
+}
+
+
+section{
+    position: absolute;
+    top:120px;
+    left:200px;
+}
+
+.container{
+	width:1500px;
+}
+
+aside > ul > li > a{
+    text-decoration: none;
+    color:orangered;
+}
+
+.prd_regist{
+    width: 150px;
+}
+
+.table th, .table td{
+    vertical-align: middle;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.menu{
+    width:120px;
+    background-color: lightgray;
+}
+
+.search{
+    margin-left: 90%;
+    width: 100px;
+}
+
+.input{
+    width: 500px;
+}
+
+.cat_head{
+    padding: 10px;
+    height: 2rem;
+}
+
+.btn_plus{
+    padding-left: 10rem;
+    padding-right: 10rem;
+    height: 2.5rem;
+    border-radius: 1rem;
+}
+
+.btn_delete{
+    border-radius: 1rem;
+}
+
+.wrapper{
+    position: relative;
+    background-color: yellow;
+    margin-left:150px;
+}
+
+.dis_price{
+    margin-left:100px;
+}
+
+.img{
+    width:30px;
+    height: 10px;
+}
+
+.originPrice{
+    color:#9999A5;
+    font-size: 1.2rem;
+    font-style: oblique
+}
+
+.lastPrice{
+    font-size:1.4rem;
+    color: #541F76;
+    
+}
+
+.subName{
+    font-size:15px;
+}
+
+tr td span img{
+    width:40px;
+}
+
+.recipe{
+    font-size:21px;
+}
+
+.container1{
+	margine-left: 100px;
+	margine-right:100px;
+	text-align:center;
+}
+
+.iconarea{
+	height:30px;
+}
+
+.topEvent{
+    background-color: blueviolet;
+    height:40px;
+    text-align:center;
+    
+}
+
+.top_message {
+    color: white	;
+    text-decoration: none;
+    margin-top:20px;
+    font-size:14px;
+}
+
+body {
+    padding: 0px;
+    margin-top: 0px;
+}
+
+.menulist {
+    color: black;
+    font-size:19px;
+}
+
+.navbar-brand{
+    margin-left: 0%;
+}
+.navbar-nav li{
+/*     margin-bottom: 40px; */
+}
+.nav-link{
+    color: black;
+    font-size: 1rem;
+}
+.dropdown-menu li{
+    margin-bottom: 10px;
+}
+
+img{
+	width: 200;
+}
+
+.money{
+	width: 30px;
+}
+
+.mainLogo{
+	width:130px;
+	margin-left:450px;
+}
+
+.menuList{
+	width: 30px;
+	margin-right:10px;
+}
+
+.cart{
+	width:35px;
+}
+
+.search{
+	margin-left:1000px;
+}
+
+.adminLogo{
+	width:100px;
+}
+
+.qqq{
+	font-size:25px;
+}
+
+.www{
+	font-size:20px;
+	color : #541F76;
+}
+
+.productContentName{
+	width:450px;
+	text-align:left;
+	font-size:20px;
+}
+
+.disPrice{
+	color:red;
+}
+
+.ssss{
+	margin-top:30px;
+}
+
+.fff{
+	width:100px;
+}
+
+.static-top{
+	margin-top:30px;
+}
+
+.cartplus{
+	width:260px;
+	height:50px;
+}
+
+.rightbuy{
+	width:260px;
+	height:50px;
+	vertical-align:center !important;
+}
+
+.mainmenu{
+	margin-top:30px;
+	margin-botton:10px;
+}
+
+.yyy{
+	margin-left:200px;
+}
+
+.tableSize{
+	width:1000px;
+}
+
+#content {
+    min-width: 1050px;
+    padding-bottom: 170px;
+}
+
+.page_aticle {
+    width: 1050px;
+    margin: 0 auto;
+}
+
+#goodsList .list_goods{
+	overflow:hidden;
+	padding:0 29px;
+}
+
+#goodsList .list_goods .list{
+	overflow:hidden;
+	width:1050px;
+	margin-left:0px;
+}
+
+ol, ul{
+	list-style-type:none;
+}
+
+#goodsList .list_goods li{
+	float:left;
+	width:336px;
+	height:611px;
+	padding:25px 28px 0 0;
+	margin-left:0px;
+	margin-right:0px;
+}
+
+#goodsList .list_goods .item{
+	display:block;
+	background-color:#fff;
+	cursor:pointer;
+}
+
+#goodsList .list_goods .thumb {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 396px;
+    border: 1px solid #cfcfcf;
+    background-color: #f9f8f9;
+}
+
+#goodsList .list_goods .info {
+    display: block;
+    padding: 10px;
+}
+
+#goodsList .list_goods .tag {
+    display: block;
+    height: 27px;
+    margin-top:10px;
+    vertical-align: top;
+}
+
+#goodsList .list_goods .name {
+    display: block;
+    overflow: hidden;
+    font-weight: 700;
+    font-size: 20px;
+    color: #4c4c4c;
+    line-height: 29px;
+}
+
+#goodsList .list_goods .cost {
+    display: block;
+    padding-top: 9px;
+    font-size: 17px;
+    line-height: 24px;
+}
+
+#goodsList .list_goods .cost .dc {
+    padding-right: 1px;
+    font-weight: 700;
+    color: #999;
+    text-decoration: line-through;
+}
+
+#goodsList .list_goods .cost .emph {
+    font-weight: 700;
+    color: #795c90;
+}
+
+#goodsList .list_goods .cost .price {
+    font-weight: 700;
+    color: #795c90;
+}
+
+#goodsList .list_goods .desc {
+    display: block;
+    padding-top: 8px;
+    font-size: 13px;
+    color: #4c4c4c;
+    line-height: 19px;
+}
+
+div, th, td, li, dt, dd, p {
+    word-break: break-all;
+}
+
+#lnbMenu {
+   
+}
+
+#bnrCategory {
+    display: none;
+    position: relative;
+    margin: 0 auto 20px;
+}
+
+#bnrCategory .link_event {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://res.kurly.com/images/common/old/common/bg_1_1.gif) repeat 0 0;
+    font-size: 1px;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+#lnbMenu .inner_lnb {
+    position: relative;
+    padding-left: 29px;
+}
+
+#lnbMenu .ico_cate {
+    overflow: hidden;
+    width: 100%;
+    height: 50px;
+    padding-bottom: 10px;
+}
+
+#lnbMenu .ico_cate .ico {
+    display: none;
+    overflow: hidden;
+    float: left;
+    width: 40px;
+    height: 40px;
+}
+
+#lnbMenu .ico_cate .ico img {
+    width: 40px;
+    height: 40px;
+    vertical-align: top;
+}
+
+#lnbMenu .ico_cate .tit {
+    float: left;
+    padding: 20px 0 0 4px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: -0.3px;
+}
+
+#lnbMenu .list {
+    overflow: hidden;
+    width: 870px;
+}
+
+#lnbMenu li {
+    float: left;
+}
+
+#lnbMenu li a:hover, #lnbMenu li .on {
+    font-weight: 700;
+    color: #512772;
+}
+
+#p_name a{
+	font-size:20px !important;
+}
+	
+#icon img{
+	width:27px;
+	height:27px;
+}
+
+#manufacture{
+	width:1000px;
+}
+
+.confinish{
+	width:150px;
+}
+
+.jjj{
+	width:300px;
+}
+
+.productList{
+	font-size:12px;
+}
