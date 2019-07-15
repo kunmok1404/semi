@@ -28,7 +28,6 @@ public class LoginServlet extends HttpServlet{
 			dto.setId(id);
 			dto.setPwd(pwd);
 			
-			System.out.println(dto);
 			MemberDao dao = new MemberDao();
 			boolean isLogin = dao.login(dto);
 			if(isLogin) {
