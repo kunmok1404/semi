@@ -63,36 +63,39 @@
             <tbody>
                 <tr>
                     <td>
-                        <img src="http://placeimg.com/480/300/people"><br><br>
+           <a href="<%=request.getContextPath()%>/product/product_content.do?p_id=56"><img src="<%=request.getContextPath()%>/image/cherry.jpg"></a>
+			<br><br>
                         <table class="table table-borderless">
                             <tbody>
                                 <tr>
                                     <td class="text-center recipe">
-                                        치킨과 함께라면~~~
+                                        싱싱한 체리 한 송이 어때요?
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </td>
                     <td>
-                        <img src="http://placeimg.com/480/300/gift"><br><br>
+                      <a href="<%=request.getContextPath()%>/product/product_content.do?p_id=134"><img src="<%=request.getContextPath()%>/image/mara.jpg"></a>
+						<br><br>
                         <table class="table table-borderless">
                             <tbody>
                                 <tr>
                                     <td class="text-center recipe">
-                                        지금까지 이런 갈비는 없었다!
+                                        원조 중국식 마라탕면!
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </td>
                     <td>
-                    <img src="http://placeimg.com/480/300/tech"><br><br>
+					<a href="<%=request.getContextPath()%>/product/product_content.do?p_id=40"><img src="<%=request.getContextPath()%>/image/abocado.jpg"></a>
+                    <br><br>
                     <table class="table table-borderless">
                         <tbody>
                             <tr>
                                 <td class="text-center recipe">
-                                    한우 3종 세트~
+                                   자연의 보물~ 아보카도!
                                 </td>
                             </tr>
                         </tbody>
