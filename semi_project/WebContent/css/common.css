@@ -1,0 +1,225 @@
+ @font-face {
+     font-family: Binggrae;
+     src: url("../font/Binggrae.ttf");
+ }
+
+ * {
+     box-sizing: border-box;
+     font-family: Binggrae;
+ }
+
+/* body에 test가 붙어있다면 그 안에 있는 div에 테두리 부여
+             > 는 "직계자식" 태그를 의미 
+            그냥 띄어쓰기로 쓰면 "모든 자식" 태그를 의미                                    */
+        body[test] div,
+        body[test] p,
+        body[test] span,
+        body[test] label,
+        body[test] header,
+        body[test] main,
+        body[test] nav,
+        body[test] aside,
+        body[test] footer,
+        body[test] section,
+        body[test] article{
+            border: 1px dotted gray;
+        }
+
+/**************************************************
+페이지 네비게이터 스타일
+***************************************************/
+   .navigator{
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+        }
+        .navigator > li{
+            display: inline-block;
+            padding: 0.5rem;
+            min-width: 40px;
+            text-align: center;
+        }
+        .navigator > .active{
+            background-color: forestgreen;
+        }
+/*****************************************************
+    메뉴
+******************************************************/
+        .menu li{
+            padding: 0.5rem;
+        }
+        .menu, .menu ul{
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+        }
+        .menu > li{
+            display: inline-block;
+            width: 120px;
+            text-align: center;
+            /*이 스타일 적용시 ...처리*/
+            white-space: nowrap; /*줄바꿈안하겠다.*/
+            overflow: hidden;/*넘는거 숨기겠다.*/
+            text-overflow: ellipsis;/*넘는거 ...처리하겠다.*/
+            background-color: #3da676;
+        }
+        
+        .menu ul{
+            display: none;
+            position: absolute;
+            width: 120px;
+            top:3rem;
+        }
+        
+        .menu > li:hover > ul{
+            display: block;
+            margin-left:-8px;
+        }
+
+        .menu-fixed{
+            position: fixed;
+            top:0;
+            left: 0;
+            right: 0;
+        }
+/*****************************************************
+    테이블
+******************************************************/
+        .table{
+            border: 1px solid green;
+            border-collapse: collapse; /*collapse 합치는 속성*/
+            width: 500px;
+        }
+        .table > thead > tr{
+            background-color: #3da676;
+            color: white;
+        }
+        
+        .table th, .table td{
+            border: 1px solid green;
+            padding: 1rem;
+        }
+        /*호버 스타일*/
+        .table.table-hover > tbody > tr:hover{
+            background-color: rgba(0,0,0,0.05);
+        }
+        /*줄무늬 테이블*/
+         .table.table-stripe > tbody > tr:nth-child(2n){
+            background-color: rgba(0,0,0,0.05);
+        }
+        
+        .table.table-noline, 
+        .table.table-noline > thead > tr > th,
+        .table.table-noline > thead > tr > td,
+        .table.table-noline > tbody > tr > th,
+        .table.table-noline > tbody > tr > td,
+        .table.table-noline > tfoot > tr > th,
+        .table.table-noline > tfoot > tr > td{
+            border-style: none;
+        }
+        .table.table-hamburg{
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+            border-left: none;
+            border-right: none;
+        }
+        .table.table-hamburg > thead{
+            border-bottom: 2px solid black;
+        }
+        .table.table-hamburg, 
+        .table.table-hamburg > thead > tr > th,
+        .table.table-hamburg > thead > tr > td,
+        .table.table-hamburg > tbody > tr > th,
+        .table.table-hamburg > tbody > tr > td,
+        .table.table-hamburg > tfoot > tr > th,
+        .table.table-hamburg > tfoot > tr > td{
+            border-style: none;
+        }
+        .table.table-hamburg > tbody > tr{
+        border-bottom:1px dotted black;
+        }
+/*****************************************************
+    내용 정렬
+******************************************************/
+        .text-left{
+            text-align: left;
+        }
+        .text-right{
+            text-align: right;
+        }
+        .text-center{
+            text-align: center;
+        }
+/*****************************************************
+    폼
+******************************************************/
+ .form input,
+        .form select,
+        .form textarea{
+            outline: none;
+            padding: 0.5rem;
+        }
+        
+        /*입력창 : input(submit, button, reset빼고),select,textarea*/
+        .form input:not([type=submit]):not([type=button]):not([type=reset]),
+        .form select,
+        .form textarea{
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+        
+        /*버튼 : input(submit, button, reset) + button*/
+        .form button,
+        .form input[type=submit],
+        .form input[type=button],
+        .form input[type=reset]{
+            border:none;
+            border-radius: 5px;
+            background-color: #3da676;
+            color: white;
+        }
+        
+        /*수직 폼 확장 스타일*/
+        .form.form-vertical input:not([type=submit]):not([type=button]):not([type=reset]),
+        .form.form-vertical select,
+        .form.form-vertical textarea{
+            display: block;
+            margin: 10px 0px;
+        }
+        
+        .form.form-vertical > fieldset{
+            display: inline-block;
+            text-align: right;
+        }
+        
+        .form.form-vertical > fieldset > legend{
+            text-align: left;
+        }
+
+        .form.form-label .form-group{
+            margin:1rem 0px;
+        }
+        .form.form-label .form-group > label{
+            width: 30%;
+            float: left;
+            text-align: center;
+            padding: 0.4rem;
+        }
+        
+        .form.form-label .form-group > input{   
+            width: 70%;
+        }
+        
+        /* .form-group에서 사용한 float를 정리하는 스타일
+            - 실제로 존재하는 영역이 아님
+            - 실체화 시킨다음 스타일을 적용
+        */
+        .form.form-label .form-group::after{
+            display: block;
+            content:"";
+            clear:both;
+        }
+        
+        .form.form-label > fieldset > input{
+            width:100%;
+        }
