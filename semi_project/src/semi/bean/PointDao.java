@@ -61,6 +61,18 @@ public class PointDao {
 
 		con.close();
 	}
+	
+	public void pointRegist(String m_id) throws Exception {
+		Connection con = getConnection();
+
+		String sql = "insert into point values((select id from member where id=?), '', 1000, '적립', sysdate, 1000, '회원가입 축하 보너스')";
+		PreparedStatement ps = con.prepareStatement(sql);
+		ps.setString(1, m_id);
+	
+		ps.execute();
+
+		con.close();
+	}
 
 	public PointDto get(String id) throws Exception {
 		Connection con = getConnection();

@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import semi.bean.MemberDao;
 import semi.bean.MemberDto;
+import semi.bean.PointDao;
 
 @WebServlet (urlPatterns = "/member/regist.do")
 public class RegistServlet extends HttpServlet{
@@ -48,6 +49,8 @@ public class RegistServlet extends HttpServlet{
 			dto.setAnswer(answer);
 			
 			dao.regist(dto);
+			PointDao pdao = new PointDao();
+			pdao.pointRegist(dto.getId());
 			RequestDispatcher dis = req.getRequestDispatcher("regist_result.jsp");
 			dis.forward(req, resp);
 			
