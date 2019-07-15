@@ -17,6 +17,7 @@ public class LoginServlet extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		try {
+			
 			req.setCharacterEncoding("utf-8");
 			resp.setCharacterEncoding("utf-8");
 			
@@ -28,7 +29,6 @@ public class LoginServlet extends HttpServlet{
 			dto.setId(id);
 			dto.setPwd(pwd);
 			
-			System.out.println(dto);
 			MemberDao dao = new MemberDao();
 			boolean isLogin = dao.login(dto);
 			if(isLogin) {
