@@ -63,8 +63,8 @@
             <tbody>
                 <tr>
                     <td>
-           <a href="<%=request.getContextPath()%>/product/product_content.do?p_id=56"><img src="<%=request.getContextPath()%>/image/cherry.jpg"></a>
-			<br><br>
+	           			<a href="<%=request.getContextPath()%>/product/product_content.do?p_id=56"><img src="<%=request.getContextPath()%>/image/cherry.jpg"></a>
+						<br><br>
                         <table class="table table-borderless">
                             <tbody>
                                 <tr>
@@ -76,7 +76,7 @@
                         </table>
                     </td>
                     <td>
-                      <a href="<%=request.getContextPath()%>/product/product_content.do?p_id=134"><img src="<%=request.getContextPath()%>/image/mara.jpg"></a>
+                      	<a href="<%=request.getContextPath()%>/product/product_content.do?p_id=134"><img src="<%=request.getContextPath()%>/image/mara.jpg"></a>
 						<br><br>
                         <table class="table table-borderless">
                             <tbody>
@@ -89,18 +89,18 @@
                         </table>
                     </td>
                     <td>
-					<a href="<%=request.getContextPath()%>/product/product_content.do?p_id=40"><img src="<%=request.getContextPath()%>/image/abocado.jpg"></a>
-                    <br><br>
-                    <table class="table table-borderless">
-                        <tbody>
-                            <tr>
-                                <td class="text-center recipe">
-                                   자연의 보물~ 아보카도!
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    </td>
+						<a href="<%=request.getContextPath()%>/product/product_content.do?p_id=40"><img src="<%=request.getContextPath()%>/image/abocado.jpg"></a>
+	                    <br><br>
+	                    <table class="table table-borderless">
+	                        <tbody>
+	                            <tr>
+	                                <td class="text-center recipe">
+	                                   자연의 보물~ 아보카도!
+	                                </td>
+	                            </tr>
+	                        </tbody>
+	                    </table>
+	                    </td>
                 </tr>
             </tbody>
         </table>
@@ -114,95 +114,44 @@
             <tbody>
                 <tr>
                     <td>
-                        <img src="http://placeimg.com/350/400/any"><br><br>
-                        <h4>신선한 우유</h4><hr>
-                        <!-- 상품가격표시 테이블 -->
+	           			<a href="<%=request.getContextPath()%>/product/product_content.do?p_id=106"><img src="<%=request.getContextPath()%>/image/this1.jpg"></a>
+						<br><br>
                         <table class="table table-borderless">
                             <tbody>
                                 <tr>
-                                    <td><del class="mr-4 originPrice">15000원</del>
-                                        <img src="<%=request.getContextPath()%>/image/arrow.png" class="img">
-                                        </td>
-                                    <td class="text-left lastPrice">12000원</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" class="subName">
-                                        매일 아침을 신선한 우유와 함께~~
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" class="icon">
-                                        <span><img src="<%=request.getContextPath()%>/image/sale.png"></span>
-                                        <span><img src="<%=request.getContextPath()%>/image/new.png"></span>
+                                    <td class="text-center recipe">
+                                        간편 간식 브리또!
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </td>
                     <td>
-                        <img src="http://placeimg.com/350/400/people"><br><br>
-                        <h4>새우튀김</h4><hr>
+                      	<a href="<%=request.getContextPath()%>/product/product_content.do?p_id=130"><img src="<%=request.getContextPath()%>/image/this2.jpg"></a>
+						<br><br>
                         <table class="table table-borderless">
                             <tbody>
                                 <tr>
-                                    <td class="text-left lastPrice">12000원</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" class="subName">
-                                        맛있고 쫄깃한 그맛...
+                                    <td class="text-center recipe">
+                                        완전 맛나 병 샐러드~
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </td>
                     <td>
-                        <img src="http://placeimg.com/350/400/gift"><br><br>
-                        <h4>상품명</h4><hr>
-                        <table class="table table-borderless">
-                            <tbody>
-                                <tr>
-                                    <td><del class="mr-4 originPrice">15000원</del>
-                                        <img src="<%=request.getContextPath()%>/image/arrow.png" class="img">
-                                        </td>
-                                    <td class="text-left lastPrice">12000원</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" class="subName">
-                                        매일 아침을 신선한 우유와 함께~~
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" class="icon">
-                                        <span><img src="<%=request.getContextPath()%>/image/new.png"></span>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </td>
-                    <td>
-                        <img src="http://placeimg.com/350/400/tech"><br><br>
-                        <h4>상품명</h4><hr>
-                        <table class="table table-borderless">
-                            <tbody>
-                                <tr>
-                                    <td><del class="mr-4 originPrice">15000원</del>
-                                        <img src="<%=request.getContextPath()%>/image/arrow.png" class="img">
-                                        </td>
-                                    <td class="text-left lastPrice">12000원</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" class="subName">
-                                        매일 아침을 신선한 우유와 함께~~
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" class="icon">
-                                        <span><img src="<%=request.getContextPath()%>/image/sale.png"></span>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </td>
+						<a href="<%=request.getContextPath()%>/product/product_content.do?p_id=142"><img src="<%=request.getContextPath()%>/image/this3.jpg"></a>
+	                    <br><br>
+	                    <table class="table table-borderless">
+	                        <tbody>
+	                            <tr>
+	                                <td class="text-center recipe">
+	                                   차돌 묵은지 볶음밥^_^*
+	                                </td>
+	                            </tr>
+	                        </tbody>
+	                    </table>
+	                    </td>
                 </tr>
             </tbody>
         </table>
@@ -216,41 +165,44 @@
             <tbody>
                 <tr>
                     <td>
-                        <img src="http://placeimg.com/480/300/people"><br><br>
+	           			<a href="<%=request.getContextPath()%>/product/product_content.do?p_id=82"><img src="<%=request.getContextPath()%>/image/md1.jpg"></a>
+						<br><br>
                         <table class="table table-borderless">
                             <tbody>
                                 <tr>
                                     <td class="text-center recipe">
-                                        까르보나라 만들기
+                                        무농약 친환경 콩나물
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </td>
                     <td>
-                        <img src="http://placeimg.com/480/300/gift"><br><br>
+                      	<a href="<%=request.getContextPath()%>/product/product_content.do?p_id=98"><img src="<%=request.getContextPath()%>/image/md2.jpg"></a>
+						<br><br>
                         <table class="table table-borderless">
                             <tbody>
                                 <tr>
                                     <td class="text-center recipe">
-                                        맛있는 요거트 만들기
+                                        파프리카 한잔
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </td>
                     <td>
-                    <img src="http://placeimg.com/480/300/tech"><br><br>
-                    <table class="table table-borderless">
-                        <tbody>
-                            <tr>
-                                <td class="text-center recipe">
-                                    뽀글뽀글 된장찌개
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    </td>
+						<a href="<%=request.getContextPath()%>/product/product_content.do?p_id=122"><img src="<%=request.getContextPath()%>/image/md3.jpg"></a>
+	                    <br><br>
+	                    <table class="table table-borderless">
+	                        <tbody>
+	                            <tr>
+	                                <td class="text-center recipe">
+	                                   리얼 미니 군고구마ㅋ
+	                                </td>
+	                            </tr>
+	                        </tbody>
+	                    </table>
+	                    </td>
                 </tr>
             </tbody>
         </table>
