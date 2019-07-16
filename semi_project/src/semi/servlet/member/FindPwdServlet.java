@@ -15,6 +15,12 @@ import semi.beans.MemberDto;
 @WebServlet (urlPatterns="/member/find_pwd.do")
 public class FindPwdServlet extends HttpServlet{
 	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+			RequestDispatcher dis = req.getRequestDispatcher("find_pwd.jsp");
+			dis.forward(req, resp);
+		
+	}
+	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		try {
@@ -28,7 +34,7 @@ public class FindPwdServlet extends HttpServlet{
 			
 			MemberDao dao = new MemberDao();
 			
-			if(dao.findpwd(dto)) {
+			if(dao.findPwd(dto)) {
 				RequestDispatcher dis = req.getRequestDispatcher("find_pwd_result.jsp");
 				dis.forward(req, resp);
 			}

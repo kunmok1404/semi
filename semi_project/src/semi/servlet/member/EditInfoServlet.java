@@ -27,9 +27,9 @@ public class EditInfoServlet extends HttpServlet{
 		mdto.setPwd(req.getParameter("pwd"));
 		mdto.setPhone(req.getParameter("phone"));
 		mdto.setEmail(req.getParameter("email"));
-		mdto.setZipCode(req.getParameter("zip_code"));
-		mdto.setBasicAddr(req.getParameter("basic_addr"));
-		mdto.setDetailAddr(req.getParameter("detail_addr"));
+		mdto.setZip_code(req.getParameter("zip_code"));
+		mdto.setBasic_addr(req.getParameter("basic_addr"));
+		mdto.setDetail_addr(req.getParameter("detail_addr"));
 		mdto.setQuestion(req.getParameter("question"));
 		mdto.setAnswer(req.getParameter("answer"));
 		mdto.setId(req.getParameter("id"));

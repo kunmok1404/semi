@@ -48,13 +48,12 @@ public class RegistServlet extends HttpServlet{
 			dto.setAnswer(answer);
 			
 			dao.regist(dto);
-			
 			RequestDispatcher dis = req.getRequestDispatcher("regist_result.jsp");
 			dis.forward(req, resp);
 			
 		} catch (Exception e) {
-			resp.sendError(500);
 			e.printStackTrace();
+			resp.sendError(500);
 		}
 		
 	}

@@ -49,10 +49,11 @@
         <h3 style="text-align: center">회원가입이 완료되었습니다</h3>
         <br>
         <br>
-        <div class="text-center">
+        <div align='center'>
             <a href="${root}"><button class="btn">메인화면</button></a>
         </div>
     </div>
+    
 </body>
 
 <jsp:include page="/template/footer.jsp"></jsp:include>

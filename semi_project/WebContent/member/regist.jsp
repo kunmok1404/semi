@@ -4,8 +4,8 @@
 
 <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
 <script src="https://code.jquery.com/jquery-latest.js"></script>
-<link rel="stylesheet" type="text/css"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<!-- <link rel="stylesheet" type="text/css"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script>
 	$(function() {
@@ -69,9 +69,9 @@
 				//document.querySelector("input[name=detailaddr]").focus();
 
 				// 이 코드는 jquery.js를 먼저 불러온 경우만 사용 가능
-				$("input[name=postcode").val(data.zonecode);
-				$("input[name=basicaddr]").val(addr);
-				$("input[name=detailaddr]").focus();
+				$("input[name=zip_code").val(data.zonecode);
+				$("input[name=basic_addr]").val(addr);
+				$("input[name=detail_addr]").focus();
 			}
 		}).open();
 	}
@@ -80,7 +80,7 @@
 .btn {
 	background-color: #512771;
 	border: #512771;
-	border-radius: 0px;
+	border-radius: 0px !important;
 	float: none;
 	height: 40px;
 	width: 150px;
@@ -89,6 +89,11 @@
 	color: #fff;
 	line-height: 34px;
 	vertical-align: top;
+}
+
+input[type="text"]{
+	height: 40px;
+	width: 150px;
 }
 
 .idlabel {
@@ -156,6 +161,8 @@ input[type='submit'] {
 
 span {
 	color: #949296;
+	height: 40px;
+	width: 150px;
 }
 
 .all {
@@ -182,17 +189,17 @@ span {
 
 <body style="background-color: #f9f9f9">
 	<div>
-		<h1 class="text-center">회원가입</h1>
+		<h1 align="center">회원가입</h1>
 	</div>
-	<form action="regist.do" method="POST">
+	<form action="regist.do" method="post">
 		<div align="center">
 			<table style="background-color: #fff">
 				<tbody>
 					<tr>
 						<td class="idlabel">아이디</td>
-						<td><input type="text" name="id" value maxlength="16"
+						<td><input type="text" name="id" value="" maxlength="16"
 							placeholder="예:영어 숫자 15자이내" required> <a href=""> <span
-								class="btn btn-primary id-chk">중복확인</span>
+								class="btn id-chk">중복확인</span>
 						</a></td>
 					</tr>
 
@@ -204,16 +211,22 @@ span {
 
 					<tr>
 						<td class="idlabel">이름</td>
-						<td><input type="text" name="name" placeholder="예:백컬리" required>
-						</td>
+						<td><input type="text" name="name" placeholder="예:백컬리"
+							required></td>
 					</tr>
 
 					<tr>
 						<td class="idlabel">이메일</td>
 						<td><input type="text" name="email" value maxlength="16"
-							placeholder="예:back@kurly.com" required> <a href=""> <span
-								class="btn btn-primary id-chk">중복확인</span>
+							placeholder="예:back@kurly.com" required> <a href="">
+								<span class="btn id-chk">중복확인</span>
 						</a></td>
+					</tr>
+					
+					<tr>
+						<td class="idlabel">전화번호</td>
+						<td><input type="text" name="phone" placeholder="'-'없이 숫자만입력해주세요"
+							required></td>
 					</tr>
 
 					<tr>
@@ -221,21 +234,38 @@ span {
 						<td>
 							<div class="birth-text">
 								<input type="text" name="birth" value maxlength="4"
-									placeholder="YYYY" required> <span>/</span> <input type="text"
-									name="birth" value maxlength="2" placeholder="MM" required> <span>/</span>
-								<input type="text" name="birth" value maxlength="2"
-									placeholder="DD" required>
+									placeholder="YYYY" required> <span>/</span> <input
+									type="text" name="birth" value maxlength="2" placeholder="MM"
+									required> <span>/</span> <input type="text"
+									name="birth" value maxlength="2" placeholder="DD" required>
 							</div>
 						</td>
 					</tr>
 
 					<tr>
 						<td class="idlabel">배송주소</td>
-						<td class="addr"><input type="text" name="postcode"
-							placeholder="우편번호"> <input type="button" value="우편번호 찾기"
-							class="btn btn-primary btn-addr" required><br> <input
-							type="text" name="basicaddr" placeholder="주소"><br> <input
-							type="text" name="detailaddr" placeholder="상세주소"></td>
+						<td class="addr"><input type="text" name="zip_code"
+							placeholder="우편번호" readonly> <input type="button" value="우편번호 찾기"
+							class="btn btn-addr" required><br> <input
+							type="text" name="basic_addr" placeholder="주소" readonly><br> <input
+							type="text" name="detail_addr" placeholder="상세주소"></td>
+					</tr>
+					
+					<tr>
+						<td class="idlabel">질문</td>
+						<td>
+						<select name="question">
+							<option>자신의 보물 제1호는?</option>				
+							<option>초등학교 이름은?</option>				
+							<option>제일 친한 친구 이름은?</option>				
+						</select>
+						</td>
+					</tr>
+					
+					<tr>
+						<td class="idlabel">답변</td>
+						<td><input type="text" name="answer" placeholder="답변"
+							required></td>
 					</tr>
 				</tbody>
 			</table>
@@ -246,16 +276,16 @@ span {
 						for="name" class="all">전체동의</label><span>(필수)</span>
 				</div>
 				<div class="select">
-					<input type="checkbox" id="name1" class="sub-chk" required> <label
-						for="name1">이용약관</label> <a href="#"> >약관보기</a>
+					<input type="checkbox" id="name1" class="sub-chk" required>
+					<label for="name1">이용약관</label> <a href="#"> >약관보기</a>
 				</div>
 				<div class="select">
-					<input type="checkbox" id="name2" class="sub-chk" required> <label
-						for="name2">개인정보처리방침</label><a href="#">>약관보기</a>
+					<input type="checkbox" id="name2" class="sub-chk" required>
+					<label for="name2">개인정보처리방침</label><a href="#">>약관보기</a>
 				</div>
 				<div class="select">
-					<input type="checkbox" id="name3" class="sub-chk" required> <label
-						for="name3">본인은 만 14세 이상입니다</label>
+					<input type="checkbox" id="name3" class="sub-chk" required>
+					<label for="name3">본인은 만 14세 이상입니다</label>
 				</div>
 			</div>
 			<input type="submit" value="가입하기">

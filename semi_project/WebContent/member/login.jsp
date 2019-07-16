@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<jsp:include page="/template/header.jsp"></jsp:include>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:url var="root" value="/"></c:url>
 
@@ -74,8 +74,8 @@ ul>li {
 </head>
 
 <body style="background-color: #f9f9f9">
-	<div>
-		<h2 class="text-center">로그인</h2>
+	<div align='center'>
+		<h2>로그인</h2>
 	</div>
 	<div class="content">
 		<form action="login.do" method="post">
@@ -94,6 +94,7 @@ ul>li {
 				</ul>
 
 			</div>
+		</form>
 			<div style="padding: 1rem"></div>
 			<div align="center">
 				<a href="${root}"><button class="btn">메인화면</button></a> <a
@@ -101,7 +102,6 @@ ul>li {
 					href="find_pwd.do"><button class="btn">비밀번호찾기</button></a> <a
 					href="regist.do"><button class="btn">회원가입</button></a>
 			</div>
-		</form>
 	</div>
 </body>
 

@@ -65,8 +65,8 @@ ul>li {
 </head>
 
 <body style="background-color: #f9f9f9">
-	<div>
-		<h2 class="text-center">비밀번호찾기</h2>
+	<div align='center'>
+		<h2>비밀번호찾기</h2>
 	</div>
 	<div class="content">
 		<form action="find_pwd.do" method="post">

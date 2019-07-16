@@ -66,8 +66,8 @@
 </head>
 
 <body style="background-color: #f9f9f9">
-    <div>
-        <h2 class="text-center">아이디찾기</h2>
+    <div  align='center'>
+        <h2>아이디찾기</h2>
     </div>
     <div class="content">
             <div class="login">

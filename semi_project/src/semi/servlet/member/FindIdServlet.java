@@ -31,7 +31,7 @@ public class FindIdServlet extends HttpServlet {
 
 			MemberDao dao = new MemberDao();
 
-			String id = dao.findid(dto);
+			String id = dao.findId(dto);
 
 			if (id != null) {
 				RequestDispatcher dis = req.getRequestDispatcher("find_id_result.jsp");
