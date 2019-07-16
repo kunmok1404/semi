@@ -19,6 +19,7 @@ public class MainServlet extends HttpServlet{
 	protected void service(HttpServletRequest req, 
 			HttpServletResponse resp) throws ServletException, IOException {
 		try {
+			
 			ProductCatDao cdao = new ProductCatDao();
 			List<ProductCatDto> list = cdao.selectCat();
 			req.setAttribute("list", list);
