@@ -1,12 +1,12 @@
-@font-face {
+/* @font-face {
     font-family: Binggrae;
     src: url("../font/Binggrae.ttf");
-}
+} */
 
-* {
+/* * {
     box-sizing: border-box;
     font-family: Binggrae;
-}
+} */
 
 .sidebar {
     width:150px !important;
@@ -160,7 +160,7 @@ body {
 
 .menulist {
     color: black;
-    font-size:19px;
+    font-size:15px;
 }
 
 .navbar-brand{
