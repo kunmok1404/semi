@@ -54,5 +54,4 @@ public class CommentsDto {
 		return "ReplyDto [no=" + no + ", writer=" + writer + ", content=" + content + ", when=" + when + ", origin="
 				+ origin + "]";
 	}
-
 }

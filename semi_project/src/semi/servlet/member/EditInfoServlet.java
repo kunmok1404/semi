@@ -62,7 +62,6 @@ public class EditInfoServlet extends HttpServlet{
 			PointDto pdto = pdao.get(id);
 			req.setAttribute("pdto", pdto);
 			
-
 			RequestDispatcher dis = req.getRequestDispatcher("edit_info.jsp");
 			dis.forward(req, resp);
 		} catch (Exception e) {

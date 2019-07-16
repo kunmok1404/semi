@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import javax.sql.DataSource;
 import javax.naming.Context;
 import javax.naming.InitialContext;
-import javax.sql.DataSource;
 
 public class MemberDao {
 	static DataSource src;
@@ -246,6 +246,5 @@ public class MemberDao {
 			subpw.append(list.get(i));
 		}
 		return subpw.toString();
-
 	}
 }
