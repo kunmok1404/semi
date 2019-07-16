@@ -63,6 +63,7 @@ public class CheckPwServlet extends HttpServlet{
 				
 				RequestDispatcher dis = req.getRequestDispatcher("check_pw.jsp?error");
 				dis.forward(req, resp);
+
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

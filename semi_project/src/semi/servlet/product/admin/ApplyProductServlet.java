@@ -13,7 +13,7 @@ import semi.bean.ProductDao;
 
 @WebServlet(urlPatterns = "/admin/product/apply_product.do")
 public class ApplyProductServlet extends HttpServlet{
-
+	
 	@Override
 	protected void service(HttpServletRequest req, 
 			HttpServletResponse resp) throws ServletException, IOException {

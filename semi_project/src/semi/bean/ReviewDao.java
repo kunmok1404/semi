@@ -45,6 +45,7 @@ public class ReviewDao {
 		con.close();
 	}
 	
+
 	public ReviewDto get(int r_id) throws Exception{
 		Connection con = getConnection();
 		String sql = "select * from product_review where id = ?";
@@ -64,6 +65,7 @@ public class ReviewDao {
 		con.close();
 		
 		return rdto;
+
 	}
 	
 	public void delete(int id) throws Exception{

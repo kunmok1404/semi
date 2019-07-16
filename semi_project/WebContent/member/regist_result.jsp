@@ -49,7 +49,7 @@
         <br>
         <br>
         <div align='center'>
-            <a href="${root}"><button class="btn">메인화면</button></a>
+            <a href="${pageContext.request.contextPath}}"><button class="btn">메인화면</button></a>
         </div>
     </div>
 </body>
