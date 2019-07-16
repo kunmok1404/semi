@@ -25,6 +25,7 @@ public class ProductMainImageServlet extends HttpServlet{
 			int product_id = Integer.parseInt(req.getParameter("id"));
 			ProductImgDao idao = new ProductImgDao();
 			ProductImgDto vdto = idao.getProductMainImage(product_id);
+			System.out.println(vdto);
 			resp.reset();
 			resp.setHeader("Content-Type", "image/jpg; charset=UTF-8");	
 			resp.setHeader("Content-Disposition", "attachment; filename="+vdto.getUpload_name());
