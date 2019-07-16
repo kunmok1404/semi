@@ -23,7 +23,6 @@ public class ChargeServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		try {
-
 			req.setCharacterEncoding("utf-8");        
 			resp.setCharacterEncoding("utf-8");
 			
@@ -36,7 +35,6 @@ public class ChargeServlet extends HttpServlet {
 			pdto.setCurrentPoint(Integer.parseInt(req.getParameter("currentpoint")));
 			
 			pdao.pointCharge(pdto);
-
 			
 			resp.sendRedirect("balance.do");
 			

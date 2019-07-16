@@ -27,7 +27,6 @@ public class PointDao {
 		return src.getConnection();
 	}
 
-
 	// 적립, 취소, 환불, 구매
 	public void pointUse(PointDto dto) throws Exception {
 		Connection con = getConnection();
@@ -117,6 +116,5 @@ public class PointDao {
 		con.close();
 
 		return pList;
-
 	}
 }

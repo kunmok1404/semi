@@ -8,7 +8,6 @@ public class PointDto {
 	private String useType;
 	private int point;
 	private String useDate;
-
 	private int currentPoint;
 	private String reason;
 	
@@ -85,6 +84,5 @@ public class PointDto {
 		setUseDate(rs.getString("use_date"));
 		setCurrentPoint(rs.getInt("current_point"));
 		setReason(rs.getString("reason"));
-
 	}
 }
