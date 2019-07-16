@@ -31,7 +31,7 @@
                 $this.closest("li").addClass("active");
             })
             $("#shop").click(function(){
-            	open("http://localhost:7070/semi_project/index.jsp");
+            	open("${pageContext.request.contextPath}/index.jsp");
             })
         })
     </script>
@@ -39,7 +39,7 @@
 <body>
 	<!-- 상단네비바 시작 -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="<%=request.getContextPath()%>/admin/index_admin.jsp">
+        <a class="navbar-brand" href="<%=request.getContextPath()%>/admin/main.do">
             <img src="<%=request.getContextPath()%>/image/logo.jpg" class="adminLogo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,12 +71,12 @@
                 </li>
             </ul>
             <span class="user text-white m-3">
-                *CutyBoy님 안녕하세요!
+                ${sessionScope.id}님 안녕하세요!
             </span>
             <span class="last_login text-white m-3">
-                최종접속일자 : 2019.07.06  17 : 30
+                최종접속일자 : ${mdto.loginDate}
             </span>
-            <a href="" class="text-body btn btn-light m-2">로그아웃</a>
+            <a href="${pageContext.request.contextPath}/member/logout.do" class="text-body btn btn-light m-2">로그아웃</a>
             <a class="text-body btn btn-light" id="shop">쇼핑몰</a>
         </div>
     </nav>

@@ -30,11 +30,11 @@
 <!--     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
 
 <script>
-	$(function() {
-		$("#admin").click(function() {
-			open("http://localhost:7070/semi_project/admin/index_admin.jsp");
-		})
-	})
+// 	$(function() {
+// 		$("#admin").click(function() {
+// 			open("${pageContext.request.contextPath}/admin/index_admin.jsp");
+// 		})
+// 	})
 </script>
 
 </head>
@@ -70,8 +70,8 @@
 							</li>
 							<li class="nav-item"><a class="nav-link" href="#">고객센터</a></li>
 							
-							<c:if test="${(not empty auth) and (auth eq '관리자')}">
-								<li class="nav-item"><a class="nav-link" href="#"
+							<c:if test="${sessionScope.id eq 'admin'}">
+								<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/admin/main.do"
 									id="admin">관리자</a>
 							</c:if>
 						</c:when>

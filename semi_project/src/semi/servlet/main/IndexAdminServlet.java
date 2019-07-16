@@ -1,4 +1,4 @@
-package semi.servlet.product.admin;
+package semi.servlet.main;
 
 import java.io.IOException;
 
@@ -9,27 +9,36 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import semi.bean.MemberDao;
+import semi.bean.MemberDto;
 import semi.bean.ProductDao;
 
 @WebServlet(urlPatterns = "/admin/main.do")
 public class IndexAdminServlet extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+		System.out.println("????????????");
 		try {
 			ProductDao pdao = new ProductDao();
-			int p_count = pdao.ProductCount(); // ì´ìƒí’ˆê°¯ìˆ˜
-			int p_applyOk = pdao.applyOk();  // ìŠ¹ì¸ëœ ìˆ«ì
+			int p_count = pdao.ProductCount(); // ì´ìƒ?’ˆê°??ˆ˜
+			int p_applyOk = pdao.applyOk();  // ?Š¹?¸?œ ?ˆ«?
 			
 			req.setAttribute("p_count", p_count);
 			req.setAttribute("p_applyOk", p_applyOk);
+			
+			
+			MemberDao mdao = new MemberDao();
+			MemberDto mdto = mdao.get((String)req.getSession().getAttribute("id"));
+			
+			
+			req.setAttribute("mdto", mdto);
 			
 			RequestDispatcher dispatcher = 
 					req.getRequestDispatcher("main.jsp");
 			dispatcher.forward(req, resp);
 		} catch (Exception e) {
-			resp.sendError(500);
 			e.printStackTrace();
+			resp.sendError(500);
 		}
 	}
 }
