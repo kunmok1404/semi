@@ -1,70 +1,58 @@
 package semi.bean;
 
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class CommentsDto {
-	private int id;
-	private String memberId;
+	private int no;
+	private String writer;
 	private String content;
 	private String when;
-	private int reviewId;
-
-	public int getId() {
-		return id;
+	private int origin;
+	public int getNo() {
+		return no;
 	}
-
-	public void setId(int id) {
-		this.id = id;
+	public void setNo(int no) {
+		this.no = no;
 	}
-
-	public String getMemberId() {
-		return memberId;
+	public String getWriter() {
+		return writer;
 	}
-
-	public CommentsDto() {
-		super();
+	public void setWriter(String writer) {
+		this.writer = writer;
 	}
-
-	public CommentsDto(ResultSet rs) throws Exception{
-		setId(rs.getInt("id"));
-		setMemberId(rs.getString("member_id"));
-		setContent(rs.getString("content"));
-		setWhen(rs.getString("when"));
-		setReviewId(rs.getInt("review_id"));
-	}
-
-	@Override
-	public String toString() {
-		return "CommetsDto [id=" + id + ", memberId=" + memberId + ", content=" + content + ", when=" + when
-				+ ", reviewId=" + reviewId + "]";
-	}
-
-	public void setMemberId(String memberId) {
-		this.memberId = memberId;
-	}
-
 	public String getContent() {
 		return content;
 	}
-
 	public void setContent(String content) {
 		this.content = content;
 	}
-
 	public String getWhen() {
 		return when;
 	}
-
 	public void setWhen(String when) {
 		this.when = when;
 	}
-
-	public int getReviewId() {
-		return reviewId;
+	public int getOrigin() {
+		return origin;
 	}
-
-	public void setReviewId(int reviewId) {
-		this.reviewId = reviewId;
+	public void setOrigin(int origin) {
+		this.origin = origin;
+	}
+	public CommentsDto() {
+		super();
+	}
+	public CommentsDto(ResultSet rs) throws SQLException {
+		setNo(rs.getInt("no"));
+		setWriter(rs.getString("writer"));
+		setContent(rs.getString("content"));
+		setWhen(rs.getString("when"));
+		setOrigin(rs.getInt("origin"));
+	}
+	@Override
+	public String toString() {
+		return "ReplyDto [no=" + no + ", writer=" + writer + ", content=" + content + ", when=" + when + ", origin="
+				+ origin + "]";
 	}
 
 }

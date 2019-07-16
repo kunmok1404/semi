@@ -45,25 +45,27 @@ public class ReviewDao {
 		con.close();
 	}
 	
-	public List<ReviewDto> list(String id) throws Exception{
+
+	public ReviewDto get(int r_id) throws Exception{
 		Connection con = getConnection();
-		String sql = "select * from product_review where member_id = ?";
+		String sql = "select * from product_review where id = ?";
 		
 		PreparedStatement ps = con.prepareStatement(sql);
 		
-		ps.setString(1, id);
+		ps.setInt(1, r_id);
 		
 		ResultSet rs = ps.executeQuery();
 		
-		List<ReviewDto> list = new ArrayList<>();
+		ReviewDto rdto = null;
 		
-		while(rs.next()) {
-			list.add(new ReviewDto(rs));
+		if(rs.next()) {
+			rdto = new ReviewDto(rs);
 		}
 		
 		con.close();
 		
-		return list;
+		return rdto;
+
 	}
 	
 	public void delete(int id) throws Exception{

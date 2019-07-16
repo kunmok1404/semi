@@ -19,7 +19,7 @@
 <!-- <a href="/home">메인화면</a> -->
 
 <%-- 로그인 여부에 따라 메뉴를 구분하여 출력 --%>
-<c:set var="login" value="${not empty sessionScope.ok}"></c:set>
+<c:set var="login" value="${not empty sessionScope.login}"></c:set>
 <c:set var="admin" value="${sessionScope.grade == '관리자'}"></c:set>
 <ul class="menu menu-fixed"> 
 	<c:choose>

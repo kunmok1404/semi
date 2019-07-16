@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import semi.bean.MemberDao;
 import semi.bean.MemberDto;
+import semi.bean.PointDao;
+import semi.bean.PointDto;
 
 @WebServlet(urlPatterns="/member/edit_info.do")
 public class EditInfoServlet extends HttpServlet{
@@ -24,7 +26,7 @@ public class EditInfoServlet extends HttpServlet{
 		MemberDto mdto = new MemberDto();
 		MemberDao mdao = new MemberDao();
 		
-		mdto.setPwd(req.getParameter("pwd"));
+		mdto.setPwd(req.getParameter("confirmPassword"));
 		mdto.setPhone(req.getParameter("phone"));
 		mdto.setEmail(req.getParameter("email"));
 		mdto.setZipCode(req.getParameter("zip_code"));
@@ -32,11 +34,14 @@ public class EditInfoServlet extends HttpServlet{
 		mdto.setDetailAddr(req.getParameter("detail_addr"));
 		mdto.setQuestion(req.getParameter("question"));
 		mdto.setAnswer(req.getParameter("answer"));
-		mdto.setId(req.getParameter("id"));
+		mdto.setId(req.getParameter("m_id"));
 		
 		mdao.edit(mdto);
 		
-		RequestDispatcher dis = req.getRequestDispatcher("edit_info.do");
+		mdto = mdao.get(mdto.getId());
+		req.setAttribute("mdto", mdto);
+		
+		RequestDispatcher dis = req.getRequestDispatcher("edit_info.jsp");
 		dis.forward(req, resp);
 		} catch(Exception e) {
 			e.printStackTrace();
@@ -53,6 +58,11 @@ public class EditInfoServlet extends HttpServlet{
 			MemberDao mdao = new MemberDao();
 			MemberDto mdto = mdao.get(id);
 			req.setAttribute("mdto", mdto);
+			PointDao pdao = new PointDao();
+			PointDto pdto = pdao.get(id);
+			req.setAttribute("pdto", pdto);
+			
+
 			RequestDispatcher dis = req.getRequestDispatcher("edit_info.jsp");
 			dis.forward(req, resp);
 		} catch (Exception e) {

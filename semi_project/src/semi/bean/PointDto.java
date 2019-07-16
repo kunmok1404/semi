@@ -8,7 +8,8 @@ public class PointDto {
 	private String useType;
 	private int point;
 	private String useDate;
-	private int curretPoint;
+
+	private int currentPoint;
 	private String reason;
 	
 	public String getMemberId() {
@@ -51,12 +52,12 @@ public class PointDto {
 		this.useDate = useDate;
 	}
 
-	public int getCurretPoint() {
-		return curretPoint;
+	public int getCurrentPoint() {
+		return currentPoint;
 	}
 
-	public void setCurretPoint(int curretPoint) {
-		this.curretPoint = curretPoint;
+	public void setCurrentPoint(int curretPoint) {
+		this.currentPoint = curretPoint;
 	}
 
 	public String getReason() {
@@ -70,19 +71,20 @@ public class PointDto {
 	@Override
 	public String toString() {
 		return "PointDto [memberId=" + memberId + ", ordersId=" + ordersId + ", useType=" + useType + ", point=" + point
-				+ ", useDate=" + useDate + ", curretPoint=" + curretPoint + ", reason=" + reason + "]";
+				+ ", useDate=" + useDate + ", curretPoint=" + currentPoint + ", reason=" + reason + "]";
 	}
 
 	public PointDto() {
 	}
 	
 	public PointDto(ResultSet rs) throws Exception{
-		setMemberId(rs.getString("meber_id"));
+		setMemberId(rs.getString("member_id"));
 		setOrdersId(rs.getInt("orders_id"));
 		setUseType(rs.getString("use_type"));
 		setPoint(rs.getInt("point"));
 		setUseDate(rs.getString("use_date"));
-		setCurretPoint(rs.getInt("current_point"));
-		setReason(rs.getString("rease"));
+		setCurrentPoint(rs.getInt("current_point"));
+		setReason(rs.getString("reason"));
+
 	}
 }
