@@ -56,7 +56,7 @@ public class ReviewWriteServlet extends HttpServlet{
 			req.setAttribute("pdto", pdto);
 			
 			ReviewListDao rldao = new ReviewListDao();
-			ReviewListDto rldto = 
+//			ReviewListDto rldto = 
 			
 		} catch (Exception e) {
 			e.printStackTrace();
