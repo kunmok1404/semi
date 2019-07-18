@@ -18,6 +18,7 @@ public class ListOneServlet extends HttpServlet {
 			//페이징 도구에게 요청정보를 전달하며 처리를 부탁
 			PagingOne p = new PagingOne(req);
 			p.calculate();
+			System.out.println(p);
 			
 //			데이터 첨부
 			req.setAttribute("p", p);

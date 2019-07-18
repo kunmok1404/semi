@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,7 +14,7 @@ import semi.bean.BoardDto;
 import semi.bean.OneDao;
 import semi.bean.OneDto;
 
-//@WebServlet(urlPatterns="/board/write.do")
+@WebServlet(urlPatterns="/board/writeOne.do")
 public class ServiceOneServlet extends HttpServlet{
 	
 	@Override
@@ -31,6 +32,7 @@ public class ServiceOneServlet extends HttpServlet{
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		req.setCharacterEncoding("utf-8");
 		try {
 //			입력 : head, title, content
 			OneDto odto = new OneDto();
@@ -40,8 +42,9 @@ public class ServiceOneServlet extends HttpServlet{
 			
 
 //			세션의 작성자 정보를 추가
-			String id = (String)req.getSession().getAttribute("ok");
+			String id = (String)req.getSession().getAttribute("id");
 			odto.setWriter(id);
+			System.out.println(odto);
 			
 //			처리 : 현재 추가한 글의 번호 
 //			select board_seq.nextval from dual;

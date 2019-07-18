@@ -136,7 +136,7 @@ ol, ul {
 	color: #fff;
 }
 
-.btn {
+.btn_submit {
 	overflow: hidden;
 	float: left;
 	width: 150px;
@@ -184,7 +184,7 @@ ol, ul {
 					</div>
 					<div class="group_btn" style="text-align: center">
 						<span class="inner_groupbtn">
-							<button type="submit" class="btn btn_positive">확인</button>
+							<button type="submit" class="btn_submit btn_positive">확인</button>
 						</span>
 					</div>
 				</form>

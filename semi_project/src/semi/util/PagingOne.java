@@ -34,7 +34,7 @@ public class PagingOne {
 		this.keyword = request.getParameter("keyword");
 		this.pstr = request.getParameter("pno");
 		this.keyword = request.getParameter("keyword");
-		this.user = (String)request.getSession().getAttribute("ok");
+		this.user = (String)request.getSession().getAttribute("id");
 		this.grade = (String)request.getSession().getAttribute("grade");
 	}
 	

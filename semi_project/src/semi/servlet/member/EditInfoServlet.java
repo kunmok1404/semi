@@ -25,8 +25,12 @@ public class EditInfoServlet extends HttpServlet{
 		try {
 		MemberDto mdto = new MemberDto();
 		MemberDao mdao = new MemberDao();
-		
-		mdto.setPwd(req.getParameter("confirmPassword"));
+		boolean pwd = req.getParameter("confirmPassword").equals("");
+		if(pwd) {
+			mdto.setPwd(req.getParameter("password"));
+		}else {
+			mdto.setPwd(req.getParameter("confirmPassword"));
+		}
 		mdto.setPhone(req.getParameter("phone"));
 		mdto.setEmail(req.getParameter("email"));
 		mdto.setZipCode(req.getParameter("zip_code"));
@@ -35,6 +39,9 @@ public class EditInfoServlet extends HttpServlet{
 		mdto.setQuestion(req.getParameter("question"));
 		mdto.setAnswer(req.getParameter("answer"));
 		mdto.setId(req.getParameter("m_id"));
+		
+		
+		System.out.println(mdto);
 		
 		mdao.edit(mdto);
 		

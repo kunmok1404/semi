@@ -3,7 +3,7 @@
     src: url("../font/Binggrae.ttf");
 }
 
- {
+ *{
     box-sizing: border-box;
     font-family: Binggrae;
 } 
@@ -53,7 +53,7 @@ aside > ul > li > a{
 }
 
 .container {
-    width: 100%;
+    
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -160,14 +160,15 @@ body {
 
 .menulist {
     color: black;
-    font-size:15px;
+    font-size:22px;
 }
 
 .navbar-brand{
     margin-left: 0%;
 }
-.navbar-nav li{
+.navbar-nav{
 /*     margin-bottom: 40px; */
+font-size:30px
 }
 .nav-link{
     color: black;
@@ -193,6 +194,7 @@ img{
 .menuList{
 	width: 30px;
 	margin-right:10px;
+	font-size:20px;
 }
 
 .cart{
@@ -252,6 +254,7 @@ img{
 .mainmenu{
 	margin-top:30px;
 	margin-botton:10px;
+	width:2000px;
 }
 
 .yyy{
@@ -465,3 +468,5 @@ div, th, td, li, dt, dd, p {
 .productList{
 	font-size:12px;
 }
+
+/*∞Ì∞¥ºæ≈Õ*/

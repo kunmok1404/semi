@@ -77,7 +77,7 @@
 	}
 </script>
 <style>
-.btn {
+.btn-chk {
 	background-color: #512771;
 	border: #512771;
 	border-radius: 0px !important;
@@ -91,7 +91,7 @@
 	vertical-align: top;
 }
 
-input[type="text"]{
+input[type="text"] {
 	height: 40px;
 	width: 150px;
 }
@@ -145,7 +145,7 @@ h4 {
 	text-align: left;
 }
 
-input[type='submit'] {
+.submit {
 	background-color: #512771;
 	color: white;
 	margin-top: 2rem;
@@ -199,7 +199,7 @@ span {
 						<td class="idlabel">아이디</td>
 						<td><input type="text" name="id" value="" maxlength="16"
 							placeholder="예:영어 숫자 15자이내" required> <a href=""> <span
-								class="btn id-chk">중복확인</span>
+								class="btn btn-chk id-chk">중복확인</span>
 						</a></td>
 					</tr>
 
@@ -219,14 +219,14 @@ span {
 						<td class="idlabel">이메일</td>
 						<td><input type="text" name="email" value maxlength="16"
 							placeholder="예:back@kurly.com" required> <a href="">
-								<span class="btn id-chk">중복확인</span>
+								<span class="btn btn-chk id-chk">중복확인</span>
 						</a></td>
 					</tr>
-					
+
 					<tr>
 						<td class="idlabel">전화번호</td>
-						<td><input type="text" name="phone" placeholder="'-'없이 숫자만입력해주세요"
-							required></td>
+						<td><input type="text" name="phone"
+							placeholder="'-'없이 숫자만입력해주세요" required></td>
 					</tr>
 
 					<tr>
@@ -245,23 +245,21 @@ span {
 					<tr>
 						<td class="idlabel">배송주소</td>
 						<td class="addr"><input type="text" name="zip_code"
-							placeholder="우편번호" readonly> <input type="button" value="우편번호 찾기"
-							class="btn btn-addr" required><br> <input
-							type="text" name="basic_addr" placeholder="주소" readonly><br> <input
-							type="text" name="detail_addr" placeholder="상세주소"></td>
+							placeholder="우편번호" readonly> <input type="button"
+							value="우편번호 찾기" class="btn btn-addr btn-chk" required><br> <input
+							type="text" name="basic_addr" placeholder="주소" readonly><br>
+							<input type="text" name="detail_addr" placeholder="상세주소"></td>
 					</tr>
-					
+
 					<tr>
 						<td class="idlabel">질문</td>
-						<td>
-						<select name="question">
-							<option>자신의 보물 제1호는?</option>				
-							<option>초등학교 이름은?</option>				
-							<option>제일 친한 친구 이름은?</option>				
-						</select>
-						</td>
+						<td><select name="question">
+								<option>자신의 보물 제1호는?</option>
+								<option>초등학교 이름은?</option>
+								<option>제일 친한 친구 이름은?</option>
+						</select></td>
 					</tr>
-					
+
 					<tr>
 						<td class="idlabel">답변</td>
 						<td><input type="text" name="answer" placeholder="답변"
@@ -288,7 +286,7 @@ span {
 					<label for="name3">본인은 만 14세 이상입니다</label>
 				</div>
 			</div>
-			<input type="submit" value="가입하기">
+			<input type="submit" value="가입하기" class="submit">
 		</div>
 	</form>
 </body>

@@ -29,7 +29,7 @@ public class ProductContentImageServlet extends HttpServlet{
 			resp.setHeader("Content-Type", "image/jpg; charset=UTF-8");	
 			resp.setHeader("Content-Disposition", "attachment; filename="+vdto.getUpload_name());
 			resp.setHeader("Content-Length", String.valueOf(vdto.getFile_size()));
-			File target = new File("D:\\KH정보교육원\\중간프로젝트\\upload",vdto.getSave_name());
+			File target = new File("D:/upload/kh11",vdto.getSave_name());
 			InputStream in = new FileInputStream(target);
 			OutputStream send = resp.getOutputStream();
 				

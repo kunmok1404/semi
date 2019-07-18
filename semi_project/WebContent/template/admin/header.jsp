@@ -49,7 +49,7 @@
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto nav-menu">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">회원관리</a>
+                    <a class="nav-link" href="<%=request.getContextPath()%>/admin/member/member_list.do">회원관리</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<%=request.getContextPath()%>/admin/product/product_list.do">상품관리</a>
@@ -74,7 +74,7 @@
                 ${sessionScope.id}님 안녕하세요!
             </span>
             <span class="last_login text-white m-3">
-                최종접속일자 : ${mdto.loginDate}
+                최종접속일자 : ${memdto.loginDate}
             </span>
             <a href="${pageContext.request.contextPath}/member/logout.do" class="text-body btn btn-light m-2">로그아웃</a>
             <a class="text-body btn btn-light" id="shop">쇼핑몰</a>

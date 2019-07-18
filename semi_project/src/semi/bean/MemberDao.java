@@ -64,6 +64,25 @@ public class MemberDao {
 		return list;
 	}
 	
+	// ¸â¹ö + Æ÷ÀÎÆ® Å×ÀÌºí ºä
+	public List<MemberPointDto> memberPointlist() throws Exception {
+		Connection con = getConnection();
+		String sql = "select * from member_point order by id";
+
+		PreparedStatement ps = con.prepareStatement(sql);
+
+		ResultSet rs = ps.executeQuery();
+		List<MemberPointDto> list = new ArrayList<>();
+
+		while (rs.next()) {
+			list.add(new MemberPointDto(rs));
+		}
+
+		con.close();
+
+		return list;
+	}
+	
 	public void changePw(MemberDto mdto) throws Exception{
 		Connection con = getConnection();
 		String sql = "update member set pwd=? where id=?";
@@ -105,7 +124,7 @@ public class MemberDao {
 		Connection con = getConnection();
 		String sql = "update member set pwd=?, phone=?, email=?, zip_code=?, basic_addr=?, detail_addr=?, question=?, answer=? where id=?";
 		PreparedStatement ps = con.prepareStatement(sql);
-
+		System.out.println(mdto.getAnswer());
 		ps.setString(1, mdto.getPwd());
 		ps.setString(2, mdto.getPhone());
 		ps.setString(3, mdto.getEmail());
@@ -115,9 +134,10 @@ public class MemberDao {
 		ps.setString(7, mdto.getQuestion());
 		ps.setString(8, mdto.getAnswer());
 		ps.setString(9, mdto.getId());
-
+		
 		ps.execute();
-
+		System.out.println(mdto);
+		
 		con.close();
 	}
 

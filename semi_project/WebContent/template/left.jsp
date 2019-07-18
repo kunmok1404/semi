@@ -49,12 +49,11 @@ border: 1px solid red;
 </style>
 </head>
 <body>
-<ul class="lnb"  >
-<li class="b">고객센터  </li> 
-<li><a href="${root}board/list.do">공지사항  ></a></li>
-<li><a href="URI">자주하는 질문     ></a></li>
-<li><a href="${root}board/listOne.do">1:1 문의></a></li>
-
-</ul>
-</body>
+	<ul class="lnb">
+		<li class="b">고객센터  </li> 
+		<li><a href="${root}board/list.do">공지사항  ></a></li>
+		<li><a href="URI">자주하는 질문     ></a></li>
+		<li><a href="${root}board/listOne.do">1:1 문의></a></li>
+	</ul>
+	</body>
 </html>

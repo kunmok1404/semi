@@ -3,6 +3,7 @@ package semi.bean;
 import java.sql.ResultSet;
 
 public class MemberDto {
+	private int no;
 	private String id;
 	private String name;
 	private String pwd;
@@ -27,6 +28,7 @@ public class MemberDto {
 	}
 
 	public MemberDto(ResultSet rs) throws Exception {
+		setNo(rs.getInt("no"));
 		setId(rs.getString("id"));
 		setName(rs.getString("name"));
 		setPwd(rs.getString("pwd"));
@@ -45,6 +47,14 @@ public class MemberDto {
 		setQuestion(rs.getString("question"));
 		setAnswer(rs.getString("answer"));
 		setReason(rs.getString("reason"));
+	}
+
+	public int getNo() {
+		return no;
+	}
+
+	public void setNo(int no) {
+		this.no = no;
 	}
 
 	public String getId() {
