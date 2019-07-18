@@ -53,7 +53,7 @@ public class OneDao {
 
 		String sql = "";
 		
-		if("VIP".equals(grade)) {
+		if("관리자".equals(grade)) {
 			sql = "select * from ("
 					+ "select rownum rn, A.* from ("
 						//계층형 SQL 명령
@@ -75,7 +75,7 @@ public class OneDao {
 		}
 		
 		PreparedStatement ps = con.prepareStatement(sql);
-		if("VIP".equals(grade)) {
+		if("관리자".equals(grade)) {
 			ps.setInt(1, start);
 			ps.setInt(2, end);
 		}else {

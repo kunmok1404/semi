@@ -254,7 +254,6 @@ a {
 			<div class="member_join">
 				<div class="">
 					<form method="post" action="edit_info.do">
-						<input type="hidden" name="m_id" value="아이디들어갈자리">
 						<div class="field_head">
 							<h3 class="tit">기본정보</h3>
 							<br>
@@ -271,7 +270,9 @@ a {
 										<td class="memberCols1">새 비밀번호</td>
 										<td class="memberCols2"><input type="password"
 											name="newPassword" id="newPassword" maxlength="16"
-											class="reg_pw"></td>
+											class="reg_pw">
+											<input type='hidden' name = "password" value="${mdto.pwd }">
+											</td>
 									</tr>
 									<tr>
 										<td class="memberCols1">새 비밀번호 확인</td>
@@ -335,8 +336,7 @@ a {
 							</table>
 						</div>
 
-						<div
-							style="text-align: center; float: left; margin-top: 20px; margin-left: 20%;">
+						<div style="text-align: center; float: left; margin-top: 20px; margin-left: 20%;">
 							<span class="noline"><a href="#"><span
 									class="bhs_button active" style="float: left;">취소</span></a></span> <a
 								href="#"><span class="bhs_button active"

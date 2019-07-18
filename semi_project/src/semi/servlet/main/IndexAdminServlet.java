@@ -17,7 +17,6 @@ import semi.bean.ProductDao;
 public class IndexAdminServlet extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		System.out.println("????????????");
 		try {
 			ProductDao pdao = new ProductDao();
 			int p_count = pdao.ProductCount(); // Ï¥ùÏÉÅ?íàÍ∞??àò
@@ -31,7 +30,7 @@ public class IndexAdminServlet extends HttpServlet{
 			MemberDto mdto = mdao.get((String)req.getSession().getAttribute("id"));
 			
 			
-			req.setAttribute("mdto", mdto);
+			req.setAttribute("memdto", mdto);
 			
 			RequestDispatcher dispatcher = 
 					req.getRequestDispatcher("main.jsp");

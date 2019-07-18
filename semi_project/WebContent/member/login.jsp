@@ -30,7 +30,7 @@ h2 {
 	list-style: none;
 }
 
-input[type="submit"] {
+.submit {
 	background-color: #512771;
 	border: #512771;
 	border-radius: 0px;
@@ -63,7 +63,7 @@ ul>li {
 	padding-bottom: 1rem;
 }
 
-.btn {
+.btn-chk {
 	background-color: #fff;
 	border: #6A3664 solid 1px;
 	height: 50px;
@@ -93,17 +93,17 @@ ul>li {
 				</ul>
 				<ul>
 					<li><input type="submit" value="회원 로그인"
-						class="btn btn-primary"></li>
+						class="btn btn-primary submit"></li>
 				</ul>
 
 			</div>
 		</form>
 		<div style="padding: 1rem"></div>
 		<div align="center">
-			<a href="${root}"><button class="btn">메인화면</button></a> <a
-				href="find_id.do"><button class="btn">아이디찾기</button></a> <a
-				href="find_pwd.do"><button class="btn">비밀번호찾기</button></a> <a
-				href="regist.do"><button class="btn">회원가입</button></a>
+			<a href="${root}"><button class="btn btn-chk">메인화면</button></a> <a
+				href="find_id.do"><button class="btn btn-chk">아이디찾기</button></a> <a
+				href="find_pwd.do"><button class="btn btn-chk">비밀번호찾기</button></a> <a
+				href="regist.do"><button class="btn btn-chk">회원가입</button></a>
 		</div>
 	</div>
 </body>

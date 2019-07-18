@@ -33,6 +33,8 @@ public class LoginServlet extends HttpServlet{
 			boolean isLogin = dao.login(dto);
 			if(isLogin) {
 				req.getSession().setAttribute("id", id);
+				MemberDto dto2 = dao.get(id);
+				req.getSession().setAttribute("grade", dto2.getGrade());
 				
 				dao.loginDtUpdate(id);
 				resp.sendRedirect(req.getContextPath());				

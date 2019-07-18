@@ -103,7 +103,7 @@
 			</td>
 		</tr>
 		<%-- 댓글 목록 표시영역 --%>
-		<c:if test="${grade eq 'VIP' }">
+		<c:if test="${grade eq '관리자' }">
 		<%-- 댓글 입력 영역 --%>
 		<tr>
 			<th>답변</th>
@@ -116,7 +116,7 @@
 			</td>
 		</tr>
 		</c:if>
-		<c:if test="${not empty bdto.answerContent and grade ne 'VIP'}">
+		<c:if test="${not empty bdto.answerContent and grade ne '관리자'}">
 		<%-- 댓글 입력 영역 --%>
 		<tr>
 			<th>답변</th>

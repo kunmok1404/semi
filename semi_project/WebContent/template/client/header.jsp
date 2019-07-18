@@ -68,7 +68,7 @@
 							<li class="nav-item"><a class="nav-link"
 								href="${pageContext.request.contextPath}/member/logout.do">로그아웃</a>
 							</li>
-							<li class="nav-item"><a class="nav-link" href="#">고객센터</a></li>
+							<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/board/list.do">고객센터</a></li>
 							
 							<c:if test="${sessionScope.id eq 'admin'}">
 								<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/admin/main.do"
@@ -82,7 +82,7 @@
 							<li class="nav-item"><a class="nav-link"
 								href="${pageContext.request.contextPath}/member/login.do">로그인</a>
 							</li>
-							<li class="nav-item"><a class="nav-link" href="#">고객센터</a></li>
+							<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/board/list.do">고객센터</a></li>
 						</c:otherwise>
 					</c:choose>
 				</ul>
@@ -131,11 +131,12 @@
 					<form class="form-inline yyy">
 						<input class="form-control mr-sm-2" type="search"
 							placeholder="검색어를 입력하세요" aria-label="Search">
-						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색</button>
+<!-- 						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색</button> -->
+						<input type="submit" class="btn btn-outline-success my-2 my-sm-0" value="검색">
 					</form>
 					<a href="#"> <img
 						src="<%=request.getContextPath()%>/image/cart.png" class="cart">
-						<span class="badge badge-danger">4</span>
+						<div class="badge badge-danger">4</div>
 					</a>
 				</nav>
 

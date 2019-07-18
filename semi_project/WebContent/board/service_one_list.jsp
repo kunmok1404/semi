@@ -1,7 +1,7 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<div class="container">
 <i id=gi style="margin-right: 700px;">1:1문의</i>
 
 <!-- <form class="form" action="list.do" method="get"> -->
@@ -147,6 +147,7 @@
 		<li><a href="list.do?${p.getNextBlock()}">&gt;&gt;</a></li>
 	</c:if>
 </ul>
+</div>
 
 
 

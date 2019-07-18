@@ -31,14 +31,13 @@ public class PointDao {
 	public void pointUse(PointDto dto) throws Exception {
 		Connection con = getConnection();
 
-		String sql = "insert into point values((select id from member where id=?), ?, ?, ?, sysdate, ?, ?)";
+		String sql = "insert into point values(?, null, ?, ?, sysdate, ?, ?)";
 		PreparedStatement ps = con.prepareStatement(sql);
 		ps.setString(1, dto.getMemberId());
-		ps.setInt(2, dto.getOrdersId());
-		ps.setString(3, dto.getUseType());
-		ps.setInt(4, dto.getPoint());
-		ps.setInt(5, dto.getCurrentPoint() + dto.getPoint());
-		ps.setString(6, dto.getReason());
+		ps.setString(2, dto.getUseType());
+		ps.setInt(3, dto.getPoint());
+		ps.setInt(4, dto.getCurrentPoint() + dto.getPoint());
+		ps.setString(5, dto.getReason());
 
 		ps.execute();
 
@@ -65,7 +64,7 @@ public class PointDao {
 	public void pointRegist(String m_id) throws Exception {
 		Connection con = getConnection();
 
-		String sql = "insert into point values((select id from member where id=?), '', 1000, '적립', sysdate, 1000, '회원가입 축하 보너스')";
+		String sql = "insert into point values((select id from member where id=?), '', '적립', 1000, sysdate, 1000, '회원가입 축하 보너스')";
 		PreparedStatement ps = con.prepareStatement(sql);
 		ps.setString(1, m_id);
 	
@@ -116,5 +115,19 @@ public class PointDao {
 		con.close();
 
 		return pList;
+	}
+
+	// 포인트 관리
+	public void pointManage(PointDto pdto) throws Exception{
+		Connection conn = getConnection();
+		String sql = "update point set current_point = current_point + ?, use_type=?, reason=? where member_id = ?";
+		PreparedStatement ps = conn.prepareStatement(sql);
+		ps.setInt(1, pdto.getPoint());
+		ps.setString(2, pdto.getUseType());
+		ps.setString(3, pdto.getReason());
+		ps.setString(4, pdto.getMemberId());
+		ps.executeUpdate();
+		
+		conn.close();
 	}
 }

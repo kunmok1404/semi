@@ -137,7 +137,7 @@
 	<tfoot>
 		<tr>
 			<td align="right">
-				<c:if test="${grade eq 'VIP'}">
+				<c:if test="${grade eq '관리자'}">
 					<a href="write.do">글쓰기</a>
 					
 <%-- 				</c:if> --%>
