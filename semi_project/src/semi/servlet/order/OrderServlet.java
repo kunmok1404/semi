@@ -17,6 +17,9 @@ import semi.bean.OdDelvAddrDao;
 import semi.bean.OdDelvAddrDto;
 import semi.bean.OrdersDao;
 import semi.bean.OrdersDto;
+import semi.bean.PrdRecipeMnftViewDto;
+import semi.bean.ProductDao;
+import semi.bean.ProductDto;
 
 @WebServlet(urlPatterns = { "/order/order.do" })
 public class OrderServlet extends HttpServlet {
@@ -52,16 +55,25 @@ public class OrderServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		RequestDispatcher dis = req.getRequestDispatcher("order.jsp");
-		dis.forward(req, resp);
-		MemberDao mdao = new MemberDao();
-//		MemberDto mdto = mdao.get(req.getSession("id"));
-		
-		CartDao cdao = new CartDao();
-//		CartDto cdto = cdao.get(Integer.parseInt(req.getParameter("id")));
-		
-//		req.setAttribute("mdto", mdto);
-//		req.setAttribute("cdto", cdto);
-		
+		try {
+			MemberDao mdao = new MemberDao();
+			MemberDto mdto = mdao.get((String)req.getSession().getAttribute("id"));
+			CartDao cdao = new CartDao();
+			CartDto cdto = cdao.get(Integer.parseInt(req.getParameter("id")));
+			
+			System.out.println(mdto);
+			ProductDao pdao = new ProductDao();
+			PrdRecipeMnftViewDto prmvdto = pdao.selectProduct(Integer.parseInt(req.getParameter("p_id")));
+			
+			req.setAttribute("mdto", mdto);
+			req.setAttribute("cdto", cdto);
+			req.setAttribute("prmvdto", prmvdto);
+
+			RequestDispatcher dis = req.getRequestDispatcher("order.jsp");
+			dis.forward(req, resp);
+		} catch (Exception e) {
+			e.printStackTrace();
+			resp.sendError(500);
+		}
 	}
 }

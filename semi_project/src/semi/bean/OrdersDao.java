@@ -95,12 +95,12 @@ public class OrdersDao {
 		return list;
 	}
 
-	public OrdersDto get(int od_no) throws Exception {
+	public OrdersDto get(String member_id) throws Exception {
 		Connection con = getConnection();
 
-		String sql = "select * from orders where od_no=?";
+		String sql = "select * from orders where member_id=?";
 		PreparedStatement ps = con.prepareStatement(sql);
-		ps.setInt(1, od_no);
+		ps.setString(1, member_id);
 		ResultSet rs = ps.executeQuery();
 
 		OrdersDto odto = null;

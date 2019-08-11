@@ -24,14 +24,13 @@ public class OrderContentServlet
   {
     try
     {
-      int od_no = Integer.parseInt(req.getParameter("orderno"));
       OrdersDao odao = new OrdersDao();
+      String member_id = (String)req.getSession().getAttribute("id");
       
-      OrdersDto odto = odao.get(od_no);
+      OrdersDto odto = odao.get(member_id);
       
 
-      String login_id = (String)req.getSession().getAttribute("id");
-      boolean my = odto.getMember_id().equals(login_id);
+      boolean my = odto.getMember_id().equals(member_id);
       
 
 
@@ -41,7 +40,7 @@ public class OrderContentServlet
 
 
       RequestDispatcher dispatcher = 
-        req.getRequestDispatcher("content.jsp");
+        req.getRequestDispatcher("order_list.jsp");
       dispatcher.forward(req, resp);
     }
     catch (Exception e) {

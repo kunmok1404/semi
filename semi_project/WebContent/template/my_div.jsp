@@ -6,7 +6,7 @@
 	<h2 class="menu_title">마이컬리</h2>
 	<div class="list_div">
 		<ul class="list_menu">
-			<li><a href="#">주문 내역</a></li>
+			<li><a href="${pageContext.request.contextPath}/order/order_content.do">주문 내역</a></li>
 			<li><a href="${pageContext.request.contextPath}/point/balance.do">지갑</a></li>
 			<li><a href="${pageContext.request.contextPath}/product/review/review_list.do">상품후기</a></li>
 			<li class=""><a href="${pageContext.request.contextPath}/member/check_pw.do">개인 정보 수정</a></li>
